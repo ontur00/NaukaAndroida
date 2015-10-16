@@ -3,7 +3,6 @@ package com.example.hipokryta.testlistview.MyMainActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.hipokryta.testlistview.LoginActivity.LoginActivity;
 import com.example.hipokryta.testlistview.MyActionBar.MyActionBar;
 import com.example.hipokryta.testlistview.MyEditText.MyEditText;
 import com.example.hipokryta.testlistview.MyGridView.MyGridView;
@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
 
     private ListView listView;
     String[] tabNames = {"ListViewArrayAdapterIkony", "PodstawowyListView", "ListViewBaseAdapter",
-            "LayoutInflater", "MyGridView", "MyEditText", "MyTextView", "ActionBarActivity", ""};
+            "LayoutInflater", "MyGridView", "MyEditText", "MyTextView", "ActionBarActivity", "LoginActivity"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +67,8 @@ public class MainActivity extends Activity {
                 }else if( i== 7 ){
                     intent = new Intent(getApplicationContext(), MyActionBar.class);
                     startActivity(intent);
+                }else if( i == 8 ){
+                    startActivity(new Intent(new Intent(getApplicationContext(), LoginActivity.class)));
                 }
 
             }

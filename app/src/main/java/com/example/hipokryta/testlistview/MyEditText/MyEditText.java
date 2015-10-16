@@ -9,16 +9,16 @@ import android.view.MenuItem;
 import com.example.hipokryta.testlistview.R;
 
 
-public class MyEditText extends Activity {
+    public class MyEditText extends Activity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_edit_text);
-    }
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_my_edit_text);
+        }
 
 
-    @Override
+        @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_my_edit_text, menu);
