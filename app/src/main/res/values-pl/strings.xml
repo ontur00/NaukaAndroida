@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">testowy List View</string>
+    <string name="hello_world">Witaj świecie</string>
+    <string name="title_activity_list_view_base_adapter">ListView z Base Adapter</string>
+    <string name="title_activity_my_dialog_box">Mój Dialog Box</string>
+    <string name="title_activity_my_edit_text">"Mój Edit Text "</string>
+    <string name="title_activity_my_grid_view">"Mój Grid View "</string>
+    <string name="title_activity_test_layout_inflater">Testowy Layout Inflater</string>
+    <string name="title_activity_my_text_view">Mój Text View</string>
+
+    <string name="ActionBar_programmatically">ActionBar programowo</string>
+</resources>

@@ -1,0 +1,147 @@
+<resources>
+    <string name="app_name">testListView</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="titles">
+        <item>Title 1</item>
+        <item>Title 2</item>
+        <item>Title 3</item>
+        <item>Title 4</item>
+        <item>Title 5</item>
+        <item>Title 6</item>
+        <item>Title 7</item>
+        <item>Title 8</item>
+        <item>Title 9</item>
+        <item>Title 10</item>
+        <item>Title 1</item>
+        <item>Title 2</item>
+        <item>Title 3</item>
+        <item>Title 4</item>
+        <item>Title 5</item>
+        <item>Title 6</item>
+        <item>Title 7</item>
+        <item>Title 8</item>
+        <item>Title 9</item>
+        <item>Title 10</item>
+        <item>Title 1</item>
+        <item>Title 2</item>
+        <item>Title 3</item>
+        <item>Title 4</item>
+        <item>Title 5</item>
+        <item>Title 6</item>
+        <item>Title 7</item>
+        <item>Title 8</item>
+        <item>Title 9</item>
+        <item>Title 10</item>
+        <item>Title 1</item>
+        <item>Title 2</item>
+        <item>Title 3</item>
+        <item>Title 4</item>
+        <item>Title 5</item>
+        <item>Title 6</item>
+        <item>Title 7</item>
+        <item>Title 8</item>
+        <item>Title 9</item>
+        <item>Title 10</item>
+        <item>Title 1</item>
+        <item>Title 2</item>
+        <item>Title 3</item>
+        <item>Title 4</item>
+        <item>Title 5</item>
+        <item>Title 6</item>
+        <item>Title 7</item>
+        <item>Title 8</item>
+        <item>Title 9</item>
+        <item>Title 10</item>
+    </string-array>
+
+    <string-array name="descriptions">
+        <item>Description of 1 item are you happy</item>
+        <item>Description of 2 item are you happy</item>
+        <item>Description of 3 item are you happy</item>
+        <item>Description of 4 item are you happy</item>
+        <item>Description of 5 item are you happy</item>
+        <item>Description of 6 item are you happy</item>
+        <item>Description of 7 item are you happy</item>
+        <item>Description of 8 item are you happy</item>
+        <item>Description of 9 item are you happy</item>
+        <item>Description of 10 item are you happy</item>
+        <item>Description of 1 item are you happy</item>
+        <item>Description of 2 item are you happy</item>
+        <item>Description of 3 item are you happy</item>
+        <item>Description of 4 item are you happy</item>
+        <item>Description of 5 item are you happy</item>
+        <item>Description of 6 item are you happy</item>
+        <item>Description of 7 item are you happy</item>
+        <item>Description of 8 item are you happy</item>
+        <item>Description of 9 item are you happy</item>
+        <item>Description of 10 item are you happy</item>
+        <item>Description of 1 item are you happy</item>
+        <item>Description of 2 item are you happy</item>
+        <item>Description of 3 item are you happy</item>
+        <item>Description of 4 item are you happy</item>
+        <item>Description of 5 item are you happy</item>
+        <item>Description of 6 item are you happy</item>
+        <item>Description of 7 item are you happy</item>
+        <item>Description of 8 item are you happy</item>
+        <item>Description of 9 item are you happy</item>
+        <item>Description of 10 item are you happy</item>
+        <item>Description of 1 item are you happy</item>
+        <item>Description of 2 item are you happy</item>
+        <item>Description of 3 item are you happy</item>
+        <item>Description of 4 item are you happy</item>
+        <item>Description of 5 item are you happy</item>
+        <item>Description of 6 item are you happy</item>
+        <item>Description of 7 item are you happy</item>
+        <item>Description of 8 item are you happy</item>
+        <item>Description of 9 item are you happy</item>
+        <item>Description of 10 item are you happy</item>
+        <item>Description of 1 item are you happy</item>
+        <item>Description of 2 item are you happy</item>
+        <item>Description of 3 item are you happy</item>
+        <item>Description of 4 item are you happy</item>
+        <item>Description of 5 item are you happy</item>
+        <item>Description of 6 item are you happy</item>
+        <item>Description of 7 item are you happy</item>
+        <item>Description of 8 item are you happy</item>
+        <item>Description of 9 item are you happy</item>
+        <item>Description of 10 item are you happy</item>
+        <item>Description of 1 item are you happy</item>
+        <item>Description of 2 item are you happy</item>
+        <item>Description of 3 item are you happy</item>
+        <item>Description of 4 item are you happy</item>
+        <item>Description of 5 item are you happy</item>
+        <item>Description of 6 item are you happy</item>
+        <item>Description of 7 item are you happy</item>
+        <item>Description of 8 item are you happy</item>
+        <item>Description of 9 item are you happy</item>
+        <item>Description of 10 item are you happy</item>
+    </string-array>
+    <string name="title_activity_list_view_base_adapter">ListViewBaseAdapter</string>
+    <string name="title_activity_test_layout_inflater">TestLayoutInflater</string>
+
+    <string-array name="country_names">
+        <item>austria</item>
+        <item>egipt</item>
+        <item>holandia</item>
+        <item>jamajka</item>
+        <item>kanada</item>
+        <item>niemcy</item>
+        <item>polska</item>
+        <item>rosja</item>
+        <item>slowacja</item>
+        <item>szwecja</item>
+        <item>usa</item>
+        <item>wlochy</item>
+    </string-array>
+    <string name="title_activity_my_grid_view">MyGridView</string>
+    <string name="title_activity_my_dialog_box">MyDialogBox</string>
+    <string name="title_activity_my_edit_text">MyEditText</string>
+    <string name="title_activity_my_text_view">MyTextView</string>
+    <string name="title_activity_my_action_bar">MyActionBar</string>
+    <string name="title_activity_my_action_bar_setting">MyActionBarSetting</string>
+    <string name="ActionBar_programmatically">ActionBar programmatically</string>
+    <string name="title_activity_my_action_bar_programmaticlly">MyActionBarProgrammaticlly</string>
+</resources>

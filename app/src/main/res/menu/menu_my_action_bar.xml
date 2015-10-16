@@ -1,0 +1,43 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.hipokryta.testlistview.MyActionBar.MyActionBar">
+
+    <!-- Search, should appear as action button -->
+    <item android:id="@+id/action_search"
+        android:icon="@drawable/abc_ic_search_api_mtrl_alpha"
+        android:title="search"
+        app:showAsAction="ifRoom" />
+
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_settings"
+        android:icon="@drawable/stany"
+        android:title="@string/action_settings"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/test1"
+        android:icon="@drawable/abc_ic_ab_back_mtrl_am_alpha"
+        android:title="main activty"
+        app:showAsAction="collapseActionView"
+        />
+    <item android:id="@+id/test2"
+        android:icon="@drawable/stany"
+        android:title="@string/action_settings"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/test3"
+        android:icon="@drawable/abc_ic_ab_back_mtrl_am_alpha"
+        android:title="main activty"
+        app:showAsAction="collapseActionView"
+        />
+    <item android:id="@+id/test4"
+        android:icon="@drawable/stany"
+        android:title="@string/action_settings"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/action_main_activity"
+        android:icon="@drawable/abc_ic_ab_back_mtrl_am_alpha"
+        android:title="main activty"
+        app:showAsAction="collapseActionView"
+        />
+</menu>
