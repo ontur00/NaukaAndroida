@@ -9,10 +9,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.hipokryta.testlistview.R;
+import com.example.hipokryta.testlistview.SavingData.SavingData.Cache.CacheActivity;
+import com.example.hipokryta.testlistview.SavingData.SavingData.SavindData.File.SaveFile;
 import com.example.hipokryta.testlistview.SavingData.SavingData.SharedPreferences.MainSharedPreferences;
 
 public class SavingData extends Activity {
-    String[] elementsListView = {"Shared Preferences", "File"};
+    String[] elementsListView = {"Shared Preferences", "File", "CacheDirectory"};
 
     ListView listViewSavingData;
 
@@ -31,7 +33,9 @@ public class SavingData extends Activity {
                 if( i == 0 ){
                     startActivity(new Intent(getApplicationContext(), MainSharedPreferences.class));
                 }else if( i == 1 ){
-//                    startActivity(new Intent(getApplicationContext(), SavingData.class));
+                    startActivity(new Intent(getApplicationContext(), SaveFile.class));
+                }else if( i == 2 ){
+                    startActivity(new Intent(getApplicationContext(), CacheActivity.class));
                 }
             }
         });

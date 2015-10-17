@@ -162,4 +162,6 @@
     <string name="title_activity_save_activity_shared_preferences">SaveActivitySharedPreferences
     </string>
     <string name="title_activity_saving_data">SavingData</string>
+    <string name="title_activity_main_saving_file">MainSavingFile</string>
+    <string name="title_activity_cache">CacheActivity</string>
 </resources>
