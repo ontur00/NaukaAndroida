@@ -2,6 +2,7 @@ package com.example.hipokryta.testlistview.MyMainActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.hipokryta.testlistview.LoginActivity.LoginActivity;
 import com.example.hipokryta.testlistview.MyActionBar.MyActionBar;
@@ -20,13 +22,14 @@ import com.example.hipokryta.testlistview.MyListView.PodstawowyListView;
 import com.example.hipokryta.testlistview.MyTestLayoutInflater.TestLayoutInflater;
 import com.example.hipokryta.testlistview.MyTextView.MyTextView;
 import com.example.hipokryta.testlistview.R;
+import com.example.hipokryta.testlistview.SavingData.SharedPreferences.MainSharedPreferences;
 
 
 public class MainActivity extends Activity {
 
     private ListView listView;
     String[] tabNames = {"ListViewArrayAdapterIkony", "PodstawowyListView", "ListViewBaseAdapter",
-            "LayoutInflater", "MyGridView", "MyEditText", "MyTextView", "ActionBarActivity", "LoginActivity"};
+            "LayoutInflater", "MyGridView", "MyEditText", "MyTextView", "ActionBarActivity", "LoginActivity", "MainSharedPreferences"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +71,14 @@ public class MainActivity extends Activity {
                     intent = new Intent(getApplicationContext(), MyActionBar.class);
                     startActivity(intent);
                 }else if( i == 8 ){
-                    startActivity(new Intent(new Intent(getApplicationContext(), LoginActivity.class)));
+                    if(Build.VERSION.SDK_INT >=  11.0) {
+                        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                    }else{
+                        Toast.makeText(getApplicationContext(),
+                                "Wersja systemu jest za niska " + Build.VERSION.SDK_INT, Toast.LENGTH_LONG).show();
+                    }
+                }else  if( i == 9 ){
+                    startActivity(new Intent(getApplicationContext(), MainSharedPreferences.class));
                 }
 
             }

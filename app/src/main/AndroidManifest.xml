@@ -86,6 +86,14 @@
             android:name=".LoginActivity.LoginActivity"
             android:label="@string/title_activity_login" >
         </activity>
+        <activity
+            android:name=".SavingData.SharedPreferences.MainSharedPreferences"
+            android:label="@string/title_activity_main_shared_preferences" >
+        </activity>
+        <activity
+            android:name=".SavingData.SharedPreferences.SaveActivitySharedPreferences"
+            android:label="@string/title_activity_save_activity_shared_preferences" >
+        </activity>
     </application>
 
 </manifest>

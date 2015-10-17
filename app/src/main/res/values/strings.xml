@@ -158,4 +158,7 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="title_activity_main_shared_preferences">MainSharedPreferences</string>
+    <string name="title_activity_save_activity_shared_preferences">SaveActivitySharedPreferences
+    </string>
 </resources>
