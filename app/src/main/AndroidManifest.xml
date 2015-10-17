@@ -27,7 +27,7 @@
                 android:value="com.example.hipokryta.testlistview.MyMainActivity.MainActivity" />
         </activity>
         <activity
-            android:name=".MyListView.PodstawowyListView"
+            android:name=".ListView.MyListView.PodstawowyListView"
             android:label="@string/app_name"
             android:theme="@style/Base.ThemeOverlay.AppCompat.Light" >
             <intent-filter>
@@ -35,7 +35,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MyListView.ListViewArrayAdapterIkony"
+            android:name=".ListView.MyListView.ListViewArrayAdapterIkony"
             android:label="@string/app_name"
             android:theme="@style/Base.ThemeOverlay.AppCompat.Light" >
             <intent-filter>
@@ -43,32 +43,32 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MyListView.ListViewBaseAdapter"
+            android:name=".ListView.MyListView.ListViewBaseAdapter"
             android:label="@string/title_activity_list_view_base_adapter"
             android:theme="@style/Base.ThemeOverlay.AppCompat.Light" >
         </activity>
         <activity
-            android:name=".MyTestLayoutInflater.TestLayoutInflater"
+            android:name=".Widgets.MyEditText.MyTestLayoutInflater.TestLayoutInflater"
             android:label="@string/title_activity_test_layout_inflater"
             android:theme="@style/Base.ThemeOverlay.AppCompat.Light" >
         </activity>
         <activity
-            android:name=".MyGridView.MyGridView"
+            android:name=".ListView.MyListView.MyGridView.MyGridView"
             android:label="@string/title_activity_my_grid_view"
             android:theme="@style/Base.ThemeOverlay.AppCompat.Light" >
         </activity>
         <activity
-            android:name=".MyGridView.MyDialogBox"
+            android:name=".ListView.MyListView.MyGridView.MyDialogBox"
             android:label="@string/title_activity_my_dialog_box"
             android:theme="@android:style/Theme.WallpaperSettings" >
         </activity>
         <activity
-            android:name=".MyEditText.MyEditText"
+            android:name=".Widgets.MyEditText.MyEditText"
             android:label="@string/title_activity_my_edit_text"
             android:theme="@style/Base.ThemeOverlay.AppCompat.Light" >
         </activity>
         <activity
-            android:name=".MyTextView.MyTextView"
+            android:name=".Widgets.MyEditText.MyTextView.MyTextView"
             android:label="@string/title_activity_my_text_view"
             android:theme="@style/MyActionBar" >
         </activity>
@@ -87,12 +87,16 @@
             android:label="@string/title_activity_login" >
         </activity>
         <activity
-            android:name=".SavingData.SharedPreferences.MainSharedPreferences"
+            android:name=".SavingData.SavingData.SharedPreferences.MainSharedPreferences"
             android:label="@string/title_activity_main_shared_preferences" >
         </activity>
         <activity
-            android:name=".SavingData.SharedPreferences.SaveActivitySharedPreferences"
+            android:name=".SavingData.SavingData.SharedPreferences.SaveActivitySharedPreferences"
             android:label="@string/title_activity_save_activity_shared_preferences" >
+        </activity>
+        <activity
+            android:name=".SavingData.SavingData.SavingData"
+            android:label="@string/title_activity_saving_data" >
         </activity>
     </application>
 

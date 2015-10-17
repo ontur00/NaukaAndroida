@@ -1,48 +1,30 @@
-package com.example.hipokryta.testlistview.MyTestLayoutInflater;
+package com.example.hipokryta.testlistview.Widgets.MyEditText.MyTextView;
 
 import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.hipokryta.testlistview.R;
 
-
-public class TestLayoutInflater extends Activity {
+public class MyTextView extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test_layout_inflater);
 
-        parseXmlToJavaObject();
-    }
-
-    /**
-     * parsowanie
-     */
-    private void parseXmlToJavaObject() {
-        LayoutInflater layoutInflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
-        LinearLayout linearLayout;
-
-        linearLayout = (LinearLayout) findViewById(R.id.linearLayoutParentReliative);
-
-        View v = layoutInflater.inflate(R.layout.activity_test_layout_inflater, linearLayout, false);
-
-        linearLayout.addView(v);
-        Log.d("TestLayoutInflater",v.toString());
+        TextView textView = new TextView(this);
+        textView.setText("Wyswietlenie czystego text View");
+        setContentView(textView);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_test_layout_inflater, menu);
+        getMenuInflater().inflate(R.menu.menu_my_text_view, menu);
         return true;
     }
 

@@ -1,4 +1,4 @@
-package com.example.hipokryta.testlistview.MyListView;
+package com.example.hipokryta.testlistview.ListView.MyListView;
 
 import android.app.Activity;
 import android.content.Context;

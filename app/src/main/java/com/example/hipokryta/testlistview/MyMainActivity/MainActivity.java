@@ -14,22 +14,22 @@ import android.widget.Toast;
 
 import com.example.hipokryta.testlistview.LoginActivity.LoginActivity;
 import com.example.hipokryta.testlistview.MyActionBar.MyActionBar;
-import com.example.hipokryta.testlistview.MyEditText.MyEditText;
-import com.example.hipokryta.testlistview.MyGridView.MyGridView;
-import com.example.hipokryta.testlistview.MyListView.ListViewArrayAdapterIkony;
-import com.example.hipokryta.testlistview.MyListView.ListViewBaseAdapter;
-import com.example.hipokryta.testlistview.MyListView.PodstawowyListView;
-import com.example.hipokryta.testlistview.MyTestLayoutInflater.TestLayoutInflater;
-import com.example.hipokryta.testlistview.MyTextView.MyTextView;
+import com.example.hipokryta.testlistview.Widgets.MyEditText.MyEditText;
+import com.example.hipokryta.testlistview.ListView.MyListView.MyGridView.MyGridView;
+import com.example.hipokryta.testlistview.ListView.MyListView.ListViewArrayAdapterIkony;
+import com.example.hipokryta.testlistview.ListView.MyListView.ListViewBaseAdapter;
+import com.example.hipokryta.testlistview.ListView.MyListView.PodstawowyListView;
+import com.example.hipokryta.testlistview.Widgets.MyEditText.MyTestLayoutInflater.TestLayoutInflater;
+import com.example.hipokryta.testlistview.Widgets.MyEditText.MyTextView.MyTextView;
 import com.example.hipokryta.testlistview.R;
-import com.example.hipokryta.testlistview.SavingData.SharedPreferences.MainSharedPreferences;
+import com.example.hipokryta.testlistview.SavingData.SavingData.SavingData;
 
 
 public class MainActivity extends Activity {
 
     private ListView listView;
     String[] tabNames = {"ListViewArrayAdapterIkony", "PodstawowyListView", "ListViewBaseAdapter",
-            "LayoutInflater", "MyGridView", "MyEditText", "MyTextView", "ActionBarActivity", "LoginActivity", "MainSharedPreferences"};
+            "LayoutInflater", "MyGridView", "MyEditText", "MyTextView", "ActionBarActivity", "LoginActivity", "SavingData"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,7 +78,7 @@ public class MainActivity extends Activity {
                                 "Wersja systemu jest za niska " + Build.VERSION.SDK_INT, Toast.LENGTH_LONG).show();
                     }
                 }else  if( i == 9 ){
-                    startActivity(new Intent(getApplicationContext(), MainSharedPreferences.class));
+                    startActivity(new Intent(getApplicationContext(), SavingData.class));
                 }
 
             }

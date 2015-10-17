@@ -161,4 +161,5 @@
     <string name="title_activity_main_shared_preferences">MainSharedPreferences</string>
     <string name="title_activity_save_activity_shared_preferences">SaveActivitySharedPreferences
     </string>
+    <string name="title_activity_saving_data">SavingData</string>
 </resources>
