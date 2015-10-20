@@ -1,9 +1,11 @@
 package com.example.hipokryta.testlistview.SavingData.SavingData.Cache;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.app.Activity;
-import android.support.v7.app.AlertDialog;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +18,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class CacheActivity extends Activity {
     public static final String File_NAME = "TestFile.txt";
@@ -68,7 +71,7 @@ public class CacheActivity extends Activity {
 
                 if (loadFile()) {
                     Toast.makeText(getApplicationContext(), "File was load", Toast.LENGTH_SHORT).show();
-                }else {
+                } else {
                     showAlertDialog("Problem load file ");
                 }
 
@@ -87,6 +90,7 @@ public class CacheActivity extends Activity {
 
     /**
      * Metoda wczytuje plik .txt
+     *
      * @return true jesli poprawnie wczytano false blad przy wczytywaniu
      */
     private boolean loadFile() {
@@ -115,7 +119,7 @@ public class CacheActivity extends Activity {
         } finally {
 
             try {
-                if( fileInputStream != null) {
+                if (fileInputStream != null) {
                     fileInputStream.close();
                     return true;
                 }
@@ -133,19 +137,20 @@ public class CacheActivity extends Activity {
 
     /**
      * Znaleziono plik wczytaj zawartosc pliku
+     *
      * @param fileInputStream
      */
     private StringBuffer readFile(FileInputStream fileInputStream) throws IOException {
         StringBuffer stringBuffer = new StringBuffer();
         int index = -1;
 
-        while ( ( index = fileInputStream.read() ) != -1 ){
+        while ((index = fileInputStream.read()) != -1) {
 
-            stringBuffer.append((char)index);
+            stringBuffer.append((char) index);
 
         }
 
-        return  stringBuffer;
+        return stringBuffer;
     }
 
     private boolean saveFile() {
@@ -153,17 +158,13 @@ public class CacheActivity extends Activity {
         FileOutputStream fileOutputStream = null;
         File fileDirectory = null;
 
-        if( stringToSave != null ){
+        if (stringToSave != null) {
+            fileDirectory = getCacheDir();
+            File fileName = new File(fileDirectory, File_NAME);
 
             try {
-                fileDirectory = getCacheDir();
-                File fileName = new File(fileDirectory, File_NAME);
-
                 fileOutputStream = new FileOutputStream(fileName);
                 fileOutputStream.write(stringToSave.getBytes());
-
-                Toast.makeText(getApplicationContext(),
-                        "Saved to " + fileName , Toast.LENGTH_LONG).show();
 
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -173,16 +174,19 @@ public class CacheActivity extends Activity {
                 e.printStackTrace();
                 showAlertDialog("Can not Output to FileOutputStream buffer");
                 return false;
-            }finally {
+            } finally {
                 try {
-                    fileOutputStream.close();
+                    if (fileOutputStream != null) {
+                        fileOutputStream.close();
+                        showAlertDialog("Saved to " + fileName);
+                    }
                 } catch (IOException e) {
                     e.printStackTrace();
                     showAlertDialog("Problem with close FileOutpuStream");
                     return false;
                 }
             }
-        }else{
+        } else {
             Toast.makeText(getApplicationContext(), "Nothing to save", Toast.LENGTH_SHORT).show();
             return false;
         }
@@ -190,16 +194,12 @@ public class CacheActivity extends Activity {
     }
 
     private void showAlertDialog(String message) {
-        AlertDialog alertDialog = new AlertDialog.Builder(getApplicationContext()).create();
-        alertDialog.setTitle("Alert");
-        alertDialog.setMessage(message);
-        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-        alertDialog.show();
+        
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("Doctor");
+        alert.setMessage(message);
+        alert.setPositiveButton("OK", null);
+        alert.show();
     }
 
 }

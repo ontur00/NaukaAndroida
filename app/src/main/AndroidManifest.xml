@@ -88,23 +88,31 @@
         </activity>
         <activity
             android:name=".SavingData.SavingData.SharedPreferences.MainSharedPreferences"
-            android:label="@string/title_activity_main_shared_preferences" >
+            android:label="@string/title_activity_main_shared_preferences"
+            android:theme="@style/Base.ThemeOverlay.AppCompat.Light" >
         </activity>
         <activity
             android:name=".SavingData.SavingData.SharedPreferences.SaveActivitySharedPreferences"
-            android:label="@string/title_activity_save_activity_shared_preferences" >
+            android:label="@string/title_activity_save_activity_shared_preferences"
+            android:theme="@style/Base.ThemeOverlay.AppCompat.Light" >
         </activity>
         <activity
             android:name=".SavingData.SavingData.SavingData"
-            android:label="@string/title_activity_saving_data" >
+            android:label="@string/title_activity_saving_data"
+            android:theme="@style/myDialog" >
         </activity>
         <activity
             android:name=".SavingData.SavingData.SavindData.File.SaveFile"
-            android:label="@string/title_activity_main_saving_file" >
+            android:label="@string/title_activity_main_saving_file"
+            android:theme="@style/myDialog" >
         </activity>
         <activity
             android:name=".SavingData.SavingData.Cache.CacheActivity"
             android:label="@string/title_activity_cache" >
+        </activity>
+        <activity
+            android:name=".MyOpenGL.MyOpenGLActivity"
+            android:label="@string/title_activity_my_open_gl" >
         </activity>
     </application>
 

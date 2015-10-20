@@ -50,12 +50,6 @@ public class SaveFile extends Activity {
                     Toast.makeText(getApplicationContext(), "File was saved", Toast.LENGTH_SHORT).show();
                 }
 
-                try {
-                    Thread.sleep(500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-
                 buttonSaveFile.setVisibility(View.VISIBLE);
             }
         });
@@ -70,12 +64,6 @@ public class SaveFile extends Activity {
                     Toast.makeText(getApplicationContext(), "File was load", Toast.LENGTH_SHORT).show();
                 }else {
                     showAlertDialog("Problem load file ");
-                }
-
-                try {
-                    Thread.sleep(500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
                 }
 
                 buttonLoadFile.setVisibility(View.VISIBLE);
@@ -159,8 +147,8 @@ public class SaveFile extends Activity {
                 fileOutputStream = openFileOutput(File_NAME, MODE_PRIVATE);
                 fileOutputStream.write(stringToSave.getBytes());
 
-                Toast.makeText(getApplicationContext(),
-                        "Saved to " + fileDirectory + "/" +File_NAME, Toast.LENGTH_LONG).show();
+//                Toast.makeText(getApplicationContext(),
+//                        "Saved to " + fileDirectory + "/" +File_NAME, Toast.LENGTH_LONG).show();
 
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -173,6 +161,7 @@ public class SaveFile extends Activity {
             }finally {
                 try {
                     fileOutputStream.close();
+                    showAlertDialog("Saved to " + fileDirectory + "/" + File_NAME);
                 } catch (IOException e) {
                     e.printStackTrace();
                     showAlertDialog("Problem with close FileOutpuStream");
@@ -187,16 +176,11 @@ public class SaveFile extends Activity {
     }
 
     private void showAlertDialog(String message) {
-        AlertDialog alertDialog = new AlertDialog.Builder(getApplicationContext()).create();
-        alertDialog.setTitle("Alert");
-        alertDialog.setMessage(message);
-        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-        alertDialog.show();
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("Doctor");
+        alert.setMessage(message);
+        alert.setPositiveButton("OK", null);
+        alert.show();
     }
 
 }
