@@ -22,7 +22,7 @@ public class DebugHelper {
      * @param arg
      * @param message
      */
-    public void showToast(Activity arg, String message){
+    public static void showToast(Activity arg, String message){
 
         if(arg != null )
             Toast.makeText(arg.getApplicationContext(), message, Toast.LENGTH_LONG);
@@ -34,7 +34,7 @@ public class DebugHelper {
      * Wyswietlanie wiadomosci za pomoca Log.d
      * @param message
      */
-    public void showLog(String message){
+    public static void showLog(String message){
         Log.d(TAG, message);
     }
 
@@ -42,11 +42,17 @@ public class DebugHelper {
      * Wyswietlanie wiadomosci za pomoca AlertDialog
      * @param message
      */
-    public void showAlertDialog(Activity arg, String message){
-        AlertDialog.Builder alert = new AlertDialog.Builder(arg);
-        alert.setTitle("DEBUG");
-        alert.setMessage(message);
-        alert.setPositiveButton("OK", null);
-        alert.show();
+    public static void showAlertDialog(final Activity arg, final String message){
+        arg.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                AlertDialog.Builder alert = new AlertDialog.Builder(arg);
+                alert.setTitle("DEBUG");
+                alert.setMessage(message);
+                alert.setPositiveButton("OK", null);
+                alert.show();
+            }
+        });
+
     }
 }

@@ -111,8 +111,16 @@
             android:label="@string/title_activity_cache" >
         </activity>
         <activity
-            android:name=".MyOpenGL.MyOpenGLActivity"
+            android:name=".MyOpenGL.OpenGLStroboscobe"
             android:label="@string/title_activity_my_open_gl" >
+        </activity>
+        <activity
+            android:name=".MyOpenGL.MainOpenGL"
+            android:label="@string/title_activity_main_open_gl" >
+        </activity>
+        <activity
+            android:name=".MyOpenGL.OpenGLPyramid"
+            android:label="@string/title_activity_open_glpyramid" >
         </activity>
     </application>
 
