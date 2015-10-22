@@ -3,6 +3,8 @@
     package="com.example.hipokryta.testlistview" >
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -121,6 +123,26 @@
         <activity
             android:name=".MyOpenGL.OpenGLPyramid"
             android:label="@string/title_activity_open_glpyramid" >
+        </activity>
+        <activity
+            android:name=".Localization.LocalizationMainActivity"
+            android:label="@string/title_activity_localization_main"
+            android:theme="@style/Base.ThemeOverlay.AppCompat.Light">
+        </activity>
+        <activity
+            android:name=".Localization.GPS.GetLocationWithGPS"
+            android:label="@string/title_activity_get_location_with_gps"
+            android:theme="@style/Base.ThemeOverlay.AppCompat.Light">
+        </activity>
+        <activity
+            android:name=".Localization.GPS.MainGPSActivity"
+            android:label="@string/title_activity_main_gps"
+            android:theme="@style/Base.ThemeOverlay.AppCompat.Light">
+        </activity>
+        <activity
+            android:name=".Localization.GPS.ProviderDetail"
+            android:label="@string/title_activity_provider_detail"
+            android:theme="@style/Base.ThemeOverlay.AppCompat.Light">
         </activity>
     </application>
 

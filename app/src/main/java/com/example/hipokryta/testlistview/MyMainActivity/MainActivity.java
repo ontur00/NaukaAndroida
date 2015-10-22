@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.hipokryta.testlistview.Localization.LocalizationMainActivity;
 import com.example.hipokryta.testlistview.LoginActivity.LoginActivity;
 import com.example.hipokryta.testlistview.MyActionBar.MyActionBar;
 import com.example.hipokryta.testlistview.MyOpenGL.MainOpenGL;
@@ -30,7 +31,9 @@ public class MainActivity extends Activity {
 
     private ListView listView;
     String[] tabNames = {"ListViewArrayAdapterIkony", "PodstawowyListView", "ListViewBaseAdapter",
-            "LayoutInflater", "MyGridView", "MyEditText", "MyTextView", "ActionBarActivity", "LoginActivity", "SavingData", "OpenGL"};
+                            "LayoutInflater", "MyGridView", "MyEditText", "MyTextView",
+                            "ActionBarActivity", "LoginActivity", "SavingData", "OpenGL",
+                            "Localization"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +85,8 @@ public class MainActivity extends Activity {
                     startActivity(new Intent(getApplicationContext(), SavingData.class));
                 }else if( i == 10 ){
                     startActivity(new Intent(getApplicationContext(), MainOpenGL.class));
+                }else  if( i == 11 ){
+                    startActivity(new Intent(getApplicationContext(), LocalizationMainActivity.class));
                 }
 
             }

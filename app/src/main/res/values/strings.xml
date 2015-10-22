@@ -167,4 +167,8 @@
     <string name="title_activity_my_open_gl">MyOpenGLActivity</string>
     <string name="title_activity_main_open_gl">MainOpenGL</string>
     <string name="title_activity_open_glpyramid">OpenGLPyramid</string>
+    <string name="title_activity_localization_main">LocalizationMainActivity</string>
+    <string name="title_activity_get_location_with_gps">GetLocationWithGPS</string>
+    <string name="title_activity_main_gps">MainGPSActivity</string>
+    <string name="title_activity_provider_detail">ProviderDetail</string>
 </resources>
